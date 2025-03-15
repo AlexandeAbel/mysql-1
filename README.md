@@ -40,3 +40,13 @@
   LOWER(c.last_name) 
   FROM customer c 
   WHERE c.active = '1';
+
+## Задание 5*
+
+Выведите Email каждого покупателя, разделив значение Email на две отдельных колонки: в первой колонке должно быть значение, указанное до @, во второй — значение, указанное после @.
+
+  SELECT
+  LEFT(email, LOCATE('@',email)-1),
+  SUBSTR(email,LOCATE('@',email) + 1)
+  FROM customer c ;
+
