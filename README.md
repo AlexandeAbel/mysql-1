@@ -11,6 +11,14 @@
   LEFT(district,1) LIKE 'K%' AND
   RIGHT(district,LENGTH(district)) LIKE '%a';
 
+  #ИЛИ
+
+  SELECT DISTINCT a.district 
+  FROM address a 
+  WHERE district NOT LIKE '% %' 
+  AND district LIKE 'K%' 
+  AND district LIKE '%a';
+
 ## Задание 2
 Получите из таблицы платежей за прокат фильмов информацию по платежам, которые выполнялись в промежуток с 15 июня 2005 года по 18 июня 2005 года включительно и стоимость которых превышает 10.00.
   
