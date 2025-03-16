@@ -36,9 +36,9 @@
 Все буквы в фамилии и имени из верхнего регистра переведите в нижний регистр,
     замените буквы 'll' в именах на 'pp'.
 
-  SELECT LOWER(REPLACE(c.first_name, 'LL', 'pp')),
-  LOWER(c.last_name) 
-  FROM customer c 
+  SELECT REPLACE(LOWER(c.last_name),'ll','pp'), 
+  LOWER(c.last_name)
+  FROM customer c
   WHERE c.active = '1';
 
 ## Задание 5*
