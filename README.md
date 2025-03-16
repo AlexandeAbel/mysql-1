@@ -16,7 +16,7 @@
   SELECT DISTINCT a.district 
   FROM address a 
   WHERE district NOT LIKE '% %' 
-  AND district LIKE 'K%' \br
+  AND district LIKE 'K%'
   AND district LIKE '%a';
 
 ## Задание 2
