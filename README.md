@@ -7,14 +7,6 @@
 
   SELECT DISTINCT a.district 
   FROM address a 
-  WHERE district NOT LIKE '% %' AND 
-  LEFT(district,1) LIKE 'K%' AND
-  RIGHT(district,LENGTH(district)) LIKE '%a';
-
-  #ИЛИ
-
-  SELECT DISTINCT a.district 
-  FROM address a 
   WHERE district NOT LIKE '% %' 
   AND district LIKE 'K%'
   AND district LIKE '%a';
